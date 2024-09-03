@@ -1,0 +1,91 @@
+.safety-department-management {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-top: 120px;
+}
+
+
+.input-field {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.input-field:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.submit-button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    background-color: #00408d;
+    transform: translateY(0);
+}
+
+.error {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+
+.departments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.departments-table th,
+.departments-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.departments-table th {
+    background-color: #f4f4f4;
+}
+
+.departments-table tr:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 600px) {
+    .safety-department-management {
+        padding: 15px;
+    }
+
+    .input-field,
+    .submit-button {
+        font-size: 14px;
+    }
+
+
+}

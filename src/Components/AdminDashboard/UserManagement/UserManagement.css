@@ -1,0 +1,172 @@
+.user-management {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+input[type="text"],
+input[type="email"] {
+    font-size: 16px;
+}
+
+.userManagement-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.userManagement-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* button[type="button"] {
+    background: #dc3545;
+}
+
+button[type="button"]:hover {
+    background: #c82333;
+} */
+
+.user-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.user-table tr:hover {
+    background-color: #ddd;
+}
+
+.user-table button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-table button:hover {
+    background: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-bottom: 20px;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .user-management {
+        padding: 10px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .user-table {
+        font-size: 14px;
+    }
+
+    .user-table th,
+    .user-table td {
+        padding: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .user-table th,
+    .user-table td {
+        padding: 6px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,48 @@
+/* Success.css */
+
+.success-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+}
+
+.success-message {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.success-message h1 {
+    color: #4caf50;
+}
+
+.success-message p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.success-actions {
+    margin-top: 20px;
+}
+
+.btn-dashboard,
+.btn-home {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-dashboard {
+    background-color: #4caf50;
+}
+
+.btn-home {
+    background-color: #2196f3;
+}

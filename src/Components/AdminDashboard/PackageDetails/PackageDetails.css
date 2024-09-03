@@ -1,0 +1,119 @@
+.package-details {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+}
+
+.package-details h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.package-details p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.package-details .plan-details {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.package-details .plan-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.package-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.package-details table th,
+.package-details table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.package-details table th {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.package-details table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.package-details table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.package-details table td {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.package-details .plan-details table {
+    margin-top: 0;
+}
+
+.package-details .plan-details table th,
+.package-details .plan-details table td {
+    border: none;
+    padding: 8px;
+}
+
+.package-details button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.package-details button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .package-details {
+        padding: 15px;
+    }
+
+    .package-details h1 {
+        font-size: 1.5rem;
+    }
+
+    .package-details p,
+    .package-details table th,
+    .package-details table td {
+        font-size: 0.9rem;
+    }
+
+    .package-details table th,
+    .package-details table td {
+        padding: 8px;
+    }
+
+    .package-details button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

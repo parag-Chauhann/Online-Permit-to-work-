@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.Permitform-MainBody {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(0, 191, 88);
+    background: linear-gradient(90deg, rgba(0, 191, 88, 0.7960434173669468) 6%, rgba(117, 199, 195, 0.7176120448179272) 65%);
+}
+
+.permit-form-container {
+    position: relative;
+    max-width: 900px;
+    width: 90%;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    margin-top: 30px;
+}
+.permit-form-subcontainer{
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+header {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 50px;
+    background-color: #4070f4;
+    margin: 10px auto;
+    border-radius: 4px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.form.hidden {
+    opacity: 0;
+    transform: translateX(-20px);
+    position: absolute;
+}
+
+.form.show {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+}
+
+.details {
+    margin: 20px 0;
+}
+
+.title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+}
+
+.input-fields {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.input-fields label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.input-fields input,
+.input-fields select,
+.input-fields textarea {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    margin: 8px 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.input-fields input:focus,
+.input-fields select:focus,
+.input-fields textarea:focus {
+    border-color: #4070f4;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+    transform: scale(1.02);
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.permit-filling-section-btn-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.permit-filling-section-btn {
+    --secondary-color: #fff;
+    --hover-color: #4036fa;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    padding: 1em 1.8em;
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    background-color: #645bff;
+    color: white;
+
+  }
+  
+  .permit-filling-section-arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .permit-filling-section-arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background-color: #645bff;
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  .permit-filling-section-arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  .permit-filling-section-btn:hover {
+    background-color: var(--hover-color);
+    color: white;
+  }
+  
+  .permit-filling-section-btn:hover .permit-filling-section-arrow {
+    background: var(--secondary-color);
+  }
+  
+  .permit-filling-section-btn:hover .permit-filling-section-arrow:before {
+    right: 0;
+  }
+
+  /* From Uiverse.io by satyamchaudharydev */
+.permit-filling-back-btn {
+    --primary-color: #645bff;
+    --secondary-color: #ffffff;
+    --hover-color: #4036fa;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .permit-filling-back-arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .permit-filling-back-arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  .permit-filling-back-arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: var(--arrow-stroke) 0 0 var(--arrow-stroke);
+    display: inline-block;
+    top: -2.5px;
+    left: -3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  .permit-filling-back-btn:hover {
+    background-color: var(--hover-color);
+    color: white;
+  }
+  
+  .permit-filling-back-btn:hover .permit-filling-back-arrow {
+    background: var(--secondary-color);
+  }
+  
+  .permit-filling-back-btn:hover .permit-filling-back-arrow:before {
+    left: 0;
+  }
+  
+  
+
+.voiceRecognitionBtn,
+.locationBtn {
+    background: #008CBA;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.voiceRecognitionBtn:hover {
+    background: #007bb5;
+    transform: scale(1.05);
+}
+
+.locationBtn:hover {
+    background: #005f6a;
+    transform: scale(1.05);
+}
+
+.voiceRecognitionBtn svg,
+.locationBtn svg {
+    margin-right: 8px;
+}
+
+.precautions-table,
+.electrical-risks-table,
+.inspection-items-table,
+.ppe-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.precautions-table th,
+.electrical-risks-table th,
+.inspection-items-table th,
+.ppe-table th,
+.precautions-table td,
+.electrical-risks-table td,
+.inspection-items-table td,
+.ppe-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.precautions-table th,
+.electrical-risks-table th,
+.inspection-items-table th,
+.ppe-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.precautions-table td,
+.electrical-risks-table td,
+.inspection-items-table td,
+.ppe-table td {
+    vertical-align: middle;
+}
+
+.precautions-table tr:nth-child(even),
+.electrical-risks-table tr:nth-child(even),
+.inspection-items-table tr:nth-child(even),
+.ppe-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.precautions-table tr:hover,
+.electrical-risks-table tr:hover,
+.inspection-items-table tr:hover,
+.ppe-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.precautions-table input[type='checkbox'],
+.electrical-risks-table input[type='checkbox'],
+.inspection-items-table input[type='checkbox'],
+.ppe-table input[type='checkbox'] {
+    cursor: pointer;
+    margin: 0;
+}
+
+.details.electrical-risks .title,
+.details.precautions .title,
+.details.inspection-items .title,
+.details.ppe-required .title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+}
+
+.details.issue-acceptance {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+}
+
+.details.issue-acceptance .fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.details.issue-acceptance .input-fields {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.details.issue-acceptance label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.details.issue-acceptance input[type="text"],
+.details.issue-acceptance input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.details.issue-acceptance p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .PermitForm-container {
+        padding: 20px;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .permit-filling-section-btn{
+        width: 100px;
+    }
+
+    header {
+        font-size: 20px;
+    }
+
+    .input-fields input,
+    .input-fields select,
+    .input-fields textarea,
+    button {
+        width: 100%;
+    }
+
+    .voiceRecognitionBtn,
+    .locationBtn {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+.voice-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .switch {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(60,64,67);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .mic-on, .mic-off {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+  }
+  
+  .mic-on {
+    z-index: 4;
+  }
+  
+  .mic-off {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    opacity: 0;
+  }
+  
+  .switch:hover {
+    background-color: rgba(60,64,67, 0.8);
+  }
+  
+  #checkbox {
+    display: none;
+  }
+  
+  #checkbox:checked + .switch {
+    background-color: red;
+  }
+  
+  #checkbox:checked + .switch .mic-off {
+    opacity: 1;
+  }
+  
+  #checkbox:active + .switch {
+    transform: scale(1.2);
+  }
+  
+
+
+  /* From Uiverse.io by Shoh2008 */ 
+.loader {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 20px auto;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .loader::after {
+    content: '';
+    width: 48px;
+    height: 48px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    border-radius: 50% 50% 0;
+    border: 15px solid red;
+    transform: rotate(45deg) translate(0, 0);
+    box-sizing: border-box;
+    animation: animMarker 0.4s ease-in-out infinite alternate;
+  }
+  
+  .loader::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 150%;
+    width: 24px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    animation: animShadow 0.4s ease-in-out infinite alternate;
+  }
+  
+  @keyframes animMarker {
+    0% {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    100% {
+      transform: rotate(45deg) translate(-5px, -5px);
+    }
+  }
+  
+  @keyframes animShadow {
+    0% {
+      transform: scale(0.5);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+      

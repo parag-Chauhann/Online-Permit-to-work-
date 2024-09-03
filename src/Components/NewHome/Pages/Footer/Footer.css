@@ -1,0 +1,199 @@
+@import 'typeface-poppins';
+
+.footer {
+    background: rgba(248, 248, 248, 1);
+    color: rgba(14, 35, 104, 1);
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    margin-top: 20px;
+}
+
+footer h3 {
+    font-family: "Poppins", sans-serif;
+    /* Change the font-family to Poppins */
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.03em;
+    text-align: left;
+
+
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    height: 100px;
+    margin-top: 10px;
+}
+
+
+.footer-contact {
+    width: 300px;
+}
+
+.footer-contact,
+.footer-more,
+.footer-social {
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(100, 104, 116, 1);
+
+
+}
+
+.footer-contact h3,
+.footer-more h3,
+.footer-social h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-contact p,
+.footer-more ul {
+    list-style: none;
+    padding: 0;
+    color: rgba(100, 104, 116, 1);
+
+}
+
+.footer-contact p {
+    color: rgba(100, 104, 116, 1);
+}
+
+.footer-more ul li {
+    margin-bottom: 5px;
+
+}
+
+.footer-more ul li a {
+    text-decoration: none;
+    color: rgba(100, 104, 116, 1);
+    color: rgba(100, 104, 116, 1);
+}
+
+.footer-more ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social .social-icons {
+    display: flex;
+}
+
+.footer-social .social-icons a {
+    color: rgba(100, 104, 116, 1);
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+
+.social-logo-insta {
+    height: 20px;
+    width: auto;
+}
+
+.social-logo-twitter {
+    height: 20px;
+    width: auto;
+    color: rgb(29, 155, 240);
+    ;
+    /* Set the default color */
+    transition: color 0.3s;
+    /* Smooth transition effect on hover */
+}
+
+
+.social-logo-fb {
+    height: 20px;
+    width: auto;
+}
+
+.social-logo-insta:hover {
+    display: inline-block;
+    text-align: center;
+    border-radius: 40px;
+    font-size: 220px;
+    line-height: 250px;
+    vertical-align: middle;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white
+}
+
+.social-logo-fb:hover {
+    height: 20px;
+    width: auto;
+}
+
+@import 'typeface-poppins';
+
+.footer {
+    background: rgba(248, 248, 248, 1);
+    color: rgba(14, 35, 104, 1);
+    padding: 20px 0;
+}
+
+/* Updated CSS for screens narrower than or equal to 500px */
+@media (max-width: 500px) {
+    .footer {
+        text-align: center;
+        /* Center align the content */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        /* Display content vertically */
+    }
+
+    .footer-logo img {
+        max-width: 80%;
+        /* Set the logo width to 80% of the parent container */
+        display: block;
+        /* Center the image */
+        margin: 0 auto;
+        /* Center the image horizontally */
+    }
+
+    .footer-contact {
+        width: 80%;
+        /* Set the contact section width to 80% of the parent container */
+        text-align: center;
+        /* Center align the text */
+    }
+
+    .footer-more,
+    .footer-social {
+        width: 80%;
+        /* Set the width for the "More" and "Follow Us" sections */
+        margin: 20px auto;
+        /* Center the sections horizontally and add some spacing */
+    }
+
+    .footer-social .social-icons {
+        display: flex;
+        justify-content: center;
+        /* Center the social icons horizontally */
+        margin-top: 10px;
+        /* Add some spacing between social icons and text */
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+        font-size: 0.9rem;
+    }
+}
