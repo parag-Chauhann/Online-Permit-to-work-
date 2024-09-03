@@ -17,7 +17,7 @@ const PayUPaymentPage = ({ setToggle, form = {}, hash, transactionId, selectedPl
   useEffect(() => {
     const handlePaymentSuccess = async () => {
       try {
-        await axios.post('http://localhost:5000/subscription/api/payu/success', {
+        await axios.post('https://backend-online-work-permit-system-1.onrender.com/subscription/api/payu/success', {
           transactionId: transactionId,
           email: form.email,
           selectedPlan: selectedPlan,
@@ -77,8 +77,8 @@ const PayUPaymentPage = ({ setToggle, form = {}, hash, transactionId, selectedPl
         <input type="hidden" name="firstname" value={form?.fname || ''} />
         <input type="hidden" name="email" value={form?.email || ''} />
         <input type="hidden" name="phone" value={form?.number || ''} />
-        <input type="hidden" name="surl" value="http://localhost:5000/subscription/api/payu/success" />
-        <input type="hidden" name="furl" value="http://localhost:5000/subscription/api/payu/failure" />
+        <input type="hidden" name="surl" value="https://backend-online-work-permit-system-1.onrender.com/subscription/api/payu/success" />
+        <input type="hidden" name="furl" value="https://backend-online-work-permit-system-1.onrender.com/subscription/api/payu/failure" />
         <input type="hidden" name="hash" value={hash} />
 
         <div className="PAY-NOW-container" type="submit" onClick={handleSubmit}>

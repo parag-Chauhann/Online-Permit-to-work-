@@ -65,7 +65,7 @@ const CheckoutPage = () => {
   
     // If Free Plan is selected, skip payment gateway and create account
     if (selectedPlan === 'free') {
-      axios.post('http://localhost:5000/success/api/user/create', formData)
+      axios.post('https://backend-online-work-permit-system-1.onrender.com/success/api/user/create', formData)
         .then(response => {
           navigate('/success'); // Redirect to success page
         })
@@ -106,7 +106,7 @@ const CheckoutPage = () => {
   };
 
   const getHash = () => {
-    axios.post('http://localhost:5000/subscription/api/payu/hash', {
+    axios.post('https://backend-online-work-permit-system-1.onrender.com/subscription/api/payu/hash', {
       ...form,
       transactionId: transactionId,
       productinfo: selectedPlan

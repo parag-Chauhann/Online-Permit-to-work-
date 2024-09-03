@@ -232,7 +232,7 @@ function PermitForm({ riskAssociated, permitFormData, precautions, heading, insp
                 Serial Number: ${formData.serialNumber}, 
                 Inspection Date: ${formData.inspectionDate}, 
                 Capacity: ${formData.capacity}`,
-                approvalLink: `http://localhost:3000/login?permitNumber=${encodedPermitNumber}` // Updated link format
+                approvalLink: `https://online-permit-to-work.vercel.app/login?permitNumber=${encodedPermitNumber}` // Updated link format
             };
     
             if (typeof permitNumber !== 'string' || !permitNumber.trim()) {
