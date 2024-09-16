@@ -264,6 +264,46 @@ const AdminPortal = () => {
     return (
         <div className="admin-portal-container">
             <form className="admin-portal-form">
+            <div className="admin-portal-section">
+                <div className="admin-portal-header">Manage Areas</div>
+                <div className="admin-portal-section">
+                    <label htmlFor="newArea">New Area:</label>
+                    <input
+                        id="newArea"
+                        type="text"
+                        value={selectedArea}
+                        onChange={(e) => setSelectedArea(e.target.value)}
+                        placeholder="Enter new area"
+                    />
+                    <button
+                        type="button"
+                        className="admin-portal-button"
+                        onClick={handleAddArea}
+                    >
+                        Add Area
+                    </button>
+                </div>
+
+                {areas.map((area) => (
+                    <div key={area} className="area-container">
+                        <div className="area-name">{area}</div>
+                        <button
+                            type="button"
+                            className="admin-portal-button"
+                            onClick={() => handleEdit(area)}
+                        >
+                            <FontAwesomeIcon icon={faEdit} />
+                        </button>
+                        <button
+                            type="button"
+                            className="admin-portal-button"
+                            onClick={() => handleDeleteArea(area)}
+                        >
+                            <FontAwesomeIcon icon={faTrashAlt} />
+                        </button>
+                    </div>
+                ))}
+            </div>
                 <div className="admin-portal-header">Add Approver</div>
 
                 {error && <div className="error-message">{error}</div>}
@@ -357,47 +397,6 @@ const AdminPortal = () => {
                 </button>
             </form>
 
-            <div className="admin-portal-section">
-                <div className="admin-portal-header">Manage Areas</div>
-
-                <div className="admin-portal-section">
-                    <label htmlFor="newArea">New Area:</label>
-                    <input
-                        id="newArea"
-                        type="text"
-                        value={selectedArea}
-                        onChange={(e) => setSelectedArea(e.target.value)}
-                        placeholder="Enter new area"
-                    />
-                    <button
-                        type="button"
-                        className="admin-portal-button"
-                        onClick={handleAddArea}
-                    >
-                        Add Area
-                    </button>
-                </div>
-
-                {areas.map((area) => (
-                    <div key={area} className="area-container">
-                        <div className="area-name">{area}</div>
-                        <button
-                            type="button"
-                            className="admin-portal-button"
-                            onClick={() => handleEdit(area)}
-                        >
-                            <FontAwesomeIcon icon={faEdit} />
-                        </button>
-                        <button
-                            type="button"
-                            className="admin-portal-button"
-                            onClick={() => handleDeleteArea(area)}
-                        >
-                            <FontAwesomeIcon icon={faTrashAlt} />
-                        </button>
-                    </div>
-                ))}
-            </div>
 
             {editMode && (
                 <Modal>
