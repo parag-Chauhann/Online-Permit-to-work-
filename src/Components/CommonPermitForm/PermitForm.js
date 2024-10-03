@@ -3,7 +3,6 @@ import { doc, setDoc, increment, updateDoc, getDoc, } from 'firebase/firestore';
 import React, { useEffect, useRef, useState } from 'react';
 // import { FaArrowCircleLeft, FaArrowCircleRight, FaMicrophone } from "react-icons/fa";
 import { FaMicrophone, FaMicrophoneSlash } from 'react-icons/fa';
-import { RxEnter } from "react-icons/rx";
 import { emailjs, SERVICE_ID, TEMPLATE_ID, USER_ID } from '../../emailjsConfig'; 
 import { db } from '../../Firebase';
 import "./PermitForm.css";
@@ -19,7 +18,7 @@ function PermitForm({ riskAssociated, permitFormData, precautions, heading, insp
     const [isListening, setIsListening] = useState(false);
     const [packageDetails, setPackageDetails] = useState({});
     const [permitsCreated, setPermitsCreated] = useState(0);
-    const permitLimit = packageDetails.permitLimit || 0;
+    // const permitLimit = packageDetails.permitLimit || 0;
     const recognitionRef = useRef(null);
     const [formData, setFormData] = useState({
         ptwNumber: '',  
@@ -232,7 +231,8 @@ function PermitForm({ riskAssociated, permitFormData, precautions, heading, insp
                 Serial Number: ${formData.serialNumber}, 
                 Inspection Date: ${formData.inspectionDate}, 
                 Capacity: ${formData.capacity}`,
-                approvalLink: `https://online-permit-to-work.vercel.app/login?permitNumber=${encodedPermitNumber}` // Updated link format
+                // approvalLink: `https://online-permit-to-work.vercel.app/login?permitNumber=${encodedPermitNumber}` // Updated link format
+                approvalLink: `http://localhost:3000/login?permitNumber=${encodedPermitNumber}` // Updated link format
             };
     
             if (typeof permitNumber !== 'string' || !permitNumber.trim()) {
@@ -528,7 +528,7 @@ useEffect(() => {
         <div className='Permitform-MainBody'> 
         <div className='permit-form-container'>
             <div className='permit-form-subcontainer'>
-                <form onSubmit={handleSubmit}>
+                <form className="permit-form-main" onSubmit={handleSubmit}>
                 <header>{heading} Permit Form</header>
                     {currentStep === 1 && (
                         <div className='form first animate__animated animate__fadeIn'>

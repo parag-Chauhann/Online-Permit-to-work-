@@ -81,7 +81,9 @@ function ApprovalPage() {
                     startDate: permitData.startDate,
                     completionDate: permitData.completionDate,
                     permitNumber: permitData.ptwNumber, // Ensure this matches the placeholder in your template
-                    reviewLink: `https://online-permit-to-work.vercel.app//safety-approve/${encodeURIComponent(permitData.ptwNumber)}`, // Ensure this is the correct URL
+                    // reviewLink: `https://online-permit-to-work.vercel.app//safety-approve/${encodeURIComponent(permitData.ptwNumber)}`, // Ensure this is the correct URL
+                    reviewLink: `http://localhost:3000/safety-approve/${encodeURIComponent(permitData.ptwNumber)}`, // Ensure this is the correct URL
+                    
                     to_email: selectedSafetyEmail
                 }, USER_ID);
             }
@@ -124,7 +126,9 @@ function ApprovalPage() {
                 projectName: permitData.projectName,
                 startDate: permitData.startDate,
                 completionDate: permitData.completionDate,
-                reviewLink: `https://online-permit-to-work.vercel.app/safety-approve/${encodeURIComponent(permitData.ptwNumber)}` // Ensure this is the correct URL
+                // reviewLink: `https://online-permit-to-work.vercel.app/safety-approve/${encodeURIComponent(permitData.ptwNumber)}` // Ensure this is the correct URL
+                reviewLink: `http://localhost:3000/safety-approve/${encodeURIComponent(permitData.ptwNumber)}` // Ensure this is the correct URL
+
             }, USER_ID);
             
             alert('Permit rejected and notification sent.');

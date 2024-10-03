@@ -12,7 +12,7 @@ const [plans] = React.useState([
   {
     id: "free",
     heading: "Free Plan",
-    price: "0",
+    // price: "0",
     features: {
       permitGeneration: "10 Permits",
       automatedMailNotification: "No",
@@ -35,7 +35,7 @@ const [plans] = React.useState([
   {
     id: "Premium",
     heading: "Premium Plan",
-    price: "2000",
+    // price: "2000",
     features: {
       permitGeneration: "500 Permits",
       automatedMailNotification: "Yes",
@@ -59,7 +59,7 @@ const [plans] = React.useState([
   {
     id: "Enterprise",
     heading: "Enterprise Plan",
-    price: "20,000",
+    // price: "20,000",
     features: {
       permitGeneration: "Unlimited",
       automatedMailNotification: "Yes",
@@ -96,7 +96,7 @@ const [plans] = React.useState([
             <div className="price-cards" key={plan.id}>
               <div className="priceHeading">{plan.heading}</div>
               <div className="price__rs">
-                <span>Rs.</span>
+                {/* <span>Rs.</span> */}
                 {plan.price}
               </div>
               <ul>

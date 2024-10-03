@@ -26,16 +26,9 @@ function PermitDetails({ visible, onClose, permit, adminPlan }) {
     numberOfEmployees = 'Not Filled',
     startDate = 'Not Filled',
     completionDate = 'Not Filled',
-    liftingEquipment = 'Not Filled',
-    weight = 'Not Filled',
-    dimension = 'Not Filled',
-    quantity = 'Not Filled',
-    serialNumber = 'Not Filled',
-    inspectionDate = 'Not Filled',
-    capacity = 'Not Filled',
     currentLocation = 'Not Filled',
     jobDescription = 'Not Filled',
-    electricalRisks = [],
+    Risks = [],
     precautions = {},
     inspectedItems = [],
     otherInspectionItem = 'Not Filled',
@@ -68,16 +61,9 @@ function PermitDetails({ visible, onClose, permit, adminPlan }) {
           pdfDoc.text(`Number of Employees: ${numberOfEmployees}`, 10, 50);
           pdfDoc.text(`Start Date: ${startDate}`, 10, 60);
           pdfDoc.text(`Completion Date: ${completionDate}`, 10, 70);
-          pdfDoc.text(`Lifting Equipment: ${liftingEquipment}`, 10, 80);
-          pdfDoc.text(`Weight: ${weight}`, 10, 90);
-          pdfDoc.text(`Dimension: ${dimension}`, 10, 100);
-          pdfDoc.text(`Quantity: ${quantity}`, 10, 110);
-          pdfDoc.text(`Serial Number: ${serialNumber}`, 10, 120);
-          pdfDoc.text(`Inspection Date: ${inspectionDate}`, 10, 130);
-          pdfDoc.text(`Capacity: ${capacity}`, 10, 140);
           pdfDoc.text(`Current Location: ${currentLocation}`, 10, 150);
           pdfDoc.text(`Job Description: ${jobDescription}`, 10, 160);
-          pdfDoc.text(`Electrical Risks: ${electricalRisks.length > 0 ? electricalRisks.join(', ') : 'Not Filled'}`, 10, 170);
+          pdfDoc.text(`Risks: ${Risks.length > 0 ? Risks.join(', ') : 'Not Filled'}`, 10, 170);
           pdfDoc.text(`Precautions: ${Object.entries(precautions).map(([key, value]) => `${key}: ${value}`).join(', ') || 'Not Filled'}`, 10, 180);
           pdfDoc.text(`Inspected Items: ${inspectedItems.length > 0 ? inspectedItems.join(', ') : 'Not Filled'}`, 10, 190);
           pdfDoc.text(`Other Inspection Item: ${otherInspectionItem}`, 10, 200);
@@ -107,16 +93,9 @@ function PermitDetails({ visible, onClose, permit, adminPlan }) {
                     'Number of Employees': numberOfEmployees,
                     'Start Date': startDate,
                     'Completion Date': completionDate,
-                    'Lifting Equipment': liftingEquipment,
-                    'Weight': weight,
-                    'Dimension': dimension,
-                    'Quantity': quantity,
-                    'Serial Number': serialNumber,
-                    'Inspection Date': inspectionDate,
-                    'Capacity': capacity,
                     'Current Location': currentLocation,
                     'Job Description': jobDescription,
-                    'Electrical Risks': electricalRisks.length > 0 ? electricalRisks.join(', ') : 'Not Filled',
+                    'Electrical Risks': Risks.length > 0 ? Risks.join(', ') : 'Not Filled',
                     'Precautions': Object.entries(precautions).map(([key, value]) => `${key}: ${value}`).join(', ') || 'Not Filled',
                     'Inspected Items': inspectedItems.length > 0 ? inspectedItems.join(', ') : 'Not Filled',
                     'Other Inspection Item': otherInspectionItem,
@@ -149,16 +128,9 @@ function PermitDetails({ visible, onClose, permit, adminPlan }) {
             ['Number of Employees', numberOfEmployees],
             ['Start Date', startDate],
             ['Completion Date', completionDate],
-            ['Lifting Equipment', liftingEquipment],
-            ['Weight', weight],
-            ['Dimension', dimension],
-            ['Quantity', quantity],
-            ['Serial Number', serialNumber],
-            ['Inspection Date', inspectionDate],
-            ['Capacity', capacity],
             ['Current Location', currentLocation],
             ['Job Description', jobDescription],
-            ['Electrical Risks', electricalRisks.length > 0 ? electricalRisks.join(', ') : 'Not Filled'],
+            ['Electrical Risks', Risks.length > 0 ? Risks.join(', ') : 'Not Filled'],
             ['Precautions', Object.entries(precautions).map(([key, value]) => `${key}: ${value}`).join(', ') || 'Not Filled'],
             ['Inspected Items', inspectedItems.length > 0 ? inspectedItems.join(', ') : 'Not Filled'],
             ['Other Inspection Item', otherInspectionItem],
@@ -207,16 +179,9 @@ function PermitDetails({ visible, onClose, permit, adminPlan }) {
     { key: 'numberOfEmployees', label: 'Number of Employees', value: numberOfEmployees },
     { key: 'startDate', label: 'Start Date', value: startDate },
     { key: 'completionDate', label: 'Completion Date', value: completionDate },
-    { key: 'liftingEquipment', label: 'Lifting Equipment', value: liftingEquipment },
-    { key: 'weight', label: 'Weight', value: weight },
-    { key: 'dimension', label: 'Dimension', value: dimension },
-    { key: 'quantity', label: 'Quantity', value: quantity },
-    { key: 'serialNumber', label: 'Serial Number', value: serialNumber },
-    { key: 'inspectionDate', label: 'Inspection Date', value: inspectionDate },
-    { key: 'capacity', label: 'Capacity', value: capacity },
     { key: 'currentLocation', label: 'Current Location', value: currentLocation },
     { key: 'jobDescription', label: 'Job Description', value: jobDescription },
-    { key: 'electricalRisks', label: 'Electrical Risks', value: electricalRisks.length > 0 ? electricalRisks.join(', ') : 'Not Filled' },
+    { key: 'risks', label: 'Risks', value: Risks.length > 0 ? Risks.join(', ') : 'Not Filled' },
     { key: 'precautions', label: 'Precautions', value: Object.entries(precautions).map(([key, value]) => `${key}: ${value}`).join(', ') || 'Not Filled' },
     { key: 'inspectedItems', label: 'Inspected Items', value: inspectedItems.length > 0 ? inspectedItems.join(', ') : 'Not Filled' },
     { key: 'otherInspectionItem', label: 'Other Inspection Item', value: otherInspectionItem },

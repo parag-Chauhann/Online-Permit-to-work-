@@ -18,7 +18,7 @@ const Banner = () => {
   });
 
   return (
-    <header className="header">
+    <header className="Home-header">
       <div className="Banner_container">
         <div className="row">
           <div className="col-6">
@@ -26,19 +26,29 @@ const Banner = () => {
               <div className="header__section">
                 <ul className="header__ul">
                   <li>
+                    <Link to="https://www.facebook.com/thesafetymaster" className="home-no-decoration" target="_blank" rel="noopener noreferrer">
                     <FaFacebookF className="headerIconFb" />
+                    </Link>
                   </li>
                   <li>
+                    <Link to="https://x.com/thsafetymaster?mx=2" className="home-no-decoration" target="_blank" rel="noopener noreferrer">
                     <FaTwitter className="headerIconX" />
+                    </Link>
                   </li>
                   <li>
+                    <Link to='https://www.linkedin.com/company/thesafetymaster/' className="home-no-decoration" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin className="headerIconLinkedin" />
+                    </Link>
                   </li>
                   <li>
+                  <Link to='https://www.instagram.com/thesafetymaster_tsm/' className="home-no-decoration" target="_blank" rel="noopener noreferrer">
                     <FaInstagram className="headerIconInsta" />
+                  </Link>
                   </li>
                   <li>
+                  <Link to='https://www.youtube.com/channel/UCfBqBnuUfcMlORvhBaft7yA' className="home-no-decoration" target="_blank" rel="noopener noreferrer">
                     <FaYoutube className="headerIconYt" />
+                  </Link>
                   </li>
                 </ul>
                 <h1>{bannerData.title}</h1>

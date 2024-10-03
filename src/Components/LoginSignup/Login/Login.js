@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { db } from '../../../Firebase';
-import './Login.css';
 import { doc, getDoc } from 'firebase/firestore';
+import './Login.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesome icons
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'; // Icons for open/closed eye
 
 function Login() {
   const navigate = useNavigate();
@@ -13,6 +15,7 @@ function Login() {
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // State for toggling password visibility
 
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
@@ -22,30 +25,34 @@ function Login() {
     }));
   };
 
+  const togglePasswordVisibility = () => {
+    setShowPassword(prevShowPassword => !prevShowPassword);
+  };
+
   const handleLogin = async (e) => {
     e.preventDefault();
     const { email, password } = loginForm;
     setLoading(true);
     const auth = getAuth();
-  
+
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-  
+
       if (user) {
         // Fetch user data from Firestore
         const userDoc = await getDoc(doc(db, 'Users', user.uid));
         const userData = userDoc.data();
-  
+
         if (userData) {
           console.log("Fetched user data:", userData);
-  
+
           // Extract permit number from URL query parameters
           const urlParams = new URLSearchParams(window.location.search);
           const permitNumber = urlParams.get('permitNumber');
-  
+
           console.log("Extracted permit number:", permitNumber);
-  
+
           // Navigate based on user role and permit number
           if (userData.isAdmin) {
             if (userData.paymentStatus) {
@@ -99,7 +106,7 @@ function Login() {
       setLoading(false);
     }
   };
-  
+
   return (
     <div className='login-form'>
       <h3 className='login-heading'>Login</h3>
@@ -129,7 +136,7 @@ function Login() {
         {/* Password input */}
         <div className="flex-column">
           <label htmlFor='password'>Password</label>
-          <div className="inputForm">
+          <div className="inputForm password-container">
           <svg height="20" viewBox="-64 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg">
             <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"></path>
             <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path>
@@ -139,11 +146,14 @@ function Login() {
               className="input"
               name="password"
               placeholder="Enter your Password"
-              type="password"
+              type={showPassword ? "text" : "password"} // Toggle input type
               required
               value={loginForm.password}
               onChange={handleLoginChange}
             />
+            <span onClick={togglePasswordVisibility} className="password-toggle-icon">
+              <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} /> {/* Use FontAwesome eye/eye-slash */}
+            </span>
           </div>
         </div>
         

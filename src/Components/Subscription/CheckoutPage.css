@@ -10,7 +10,7 @@
 .checkout-form {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 18px;
     max-width: 450px;
     background-color: #fff;
     padding: 20px;
@@ -78,8 +78,8 @@
 
 .checkout-form label .checkout-input+span {
     position: absolute;
-    left: 12px;
-    top: 20px;
+    left: 14px;
+    top: 10px;
     color: grey;
     font-size: 0.9em;
     cursor: text;
@@ -93,7 +93,7 @@
 
 .checkout-form label .checkout-input:focus+span,
 .checkout-form label .checkout-input:valid+span {
-    top: -3px;
+    top: -14px;
     font-size: 0.7em;
     font-weight: 700;
     color:black;

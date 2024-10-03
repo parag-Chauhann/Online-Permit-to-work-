@@ -105,14 +105,14 @@ function SafetyApprovalPage() {
                 <p><strong>Current Location:</strong> {permitData.currentLocation}</p>
                 <p><strong>Job Description:</strong> {permitData.jobDescription}</p>
 
-                <h2>Electrical Risks</h2>
+                <h2> Risks</h2>
                 <ul>
-                    {permitData.electricalRisks && permitData.electricalRisks.length > 0 ? (
-                        permitData.electricalRisks.map((risk, index) => (
+                    {permitData.Risks && permitData.Risks.length > 0 ? (
+                        permitData.Risks.map((risk, index) => (
                             <li key={index}>{risk}</li>
                         ))
                     ) : (
-                        <li>No electrical risks listed.</li>
+                        <li>No risks listed.</li>
                     )}
                 </ul>
 

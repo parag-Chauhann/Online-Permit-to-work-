@@ -17,8 +17,10 @@ body {
 }
 .permit-dashboard-form{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 /* Profile Card Styles */

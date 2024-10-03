@@ -128,9 +128,7 @@ const AdminPortal = () => {
             console.error('No user is currently logged in.');
         }
     };
-    
-    
-    
+      
     const handleRemoveApprover = async (area, email) => {
         const auth = getAuth();
         const user = auth.currentUser;

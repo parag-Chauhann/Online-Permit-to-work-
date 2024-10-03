@@ -54,7 +54,7 @@ header::before {
     border-radius: 4px;
 }
 
-form {
+permit-form-main {
     display: flex;
     flex-direction: column;
     gap: 20px;
