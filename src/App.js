@@ -56,7 +56,6 @@ function App() {
             </PrivateRoute>
           } />
 
-
           <Route path="/subscription" element={
             <PrivateRoute>
               <CheckoutPage />

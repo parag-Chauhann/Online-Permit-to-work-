@@ -12,7 +12,7 @@ const CheckoutPage = () => {
     fname: '',
     lname: '',
     email: '',
-    amount: 0,
+    amount: "Please select the package",
     number: ''
   });
 
@@ -145,8 +145,8 @@ const CheckoutPage = () => {
     free: {
       heading: "Free Plan",
       features: {
-        permitGeneration: "30 Permits",
-        automatedMailNotification: "Yes",
+        permitGeneration: "10 Permits",
+        automatedMailNotification: "No",
         analyticalDashboard: "Yes",
         reminderAndOverdueMailNotification: "No",
         assignRoles: "Yes",
@@ -156,22 +156,32 @@ const CheckoutPage = () => {
         mailServiceSupport: "No",
         prioritySupport: "No",
         onSiteTraining: "No",
+        emailTemplates: "No",
+        automaticRenewalReminders: "No",
+        supportTicketSystem: "No",
+        customFormFields: "No",
+        geolocationServices: "No",
       }
     },
     Premium: {
       heading: "Premium Plan",
       features: {
-        permitGeneration: "Unlimited",
+        permitGeneration: "500 Permits",
         automatedMailNotification: "Yes",
         analyticalDashboard: "Yes",
-        reminderAndOverdueMailNotification: "Yes",
+        reminderAndOverdueMailNotification: "No",
         assignRoles: "Yes",
         permitStatusTracking: "Yes",
-        downloadPermitsInMultipleFormats: "Yes",
+        downloadPermitsInMultipleFormats: "No",
         sequentialPermitNumbering: "Yes",
         mailServiceSupport: "Yes",
-        prioritySupport: "Standard",
+        prioritySupport: "No",
         onSiteTraining: "No",
+        emailTemplates: "No",
+        automaticRenewalReminders: "No",
+        supportTicketSystem: "No",
+        customFormFields: "No",
+        geolocationServices: "Yes",
       }
     },
     Enterprise: {
@@ -188,6 +198,11 @@ const CheckoutPage = () => {
         mailServiceSupport: "Yes",
         prioritySupport: "24/7 Priority",
         onSiteTraining: "Yes",
+        emailTemplates: "Yes",
+        automaticRenewalReminders: "Yes",
+        supportTicketSystem: "Yes",
+        customFormFields: "Yes",
+        geolocationServices: "Yes"
       }
     }
   };
@@ -281,6 +296,7 @@ const CheckoutPage = () => {
                 />
                 <span>Email</span>
               </label>
+
 
               <label>
                 <input

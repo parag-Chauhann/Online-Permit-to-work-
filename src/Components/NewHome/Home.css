@@ -414,9 +414,10 @@ body {
     }
 
     .cssbuttons-io-button {
-        font-size: 15px;
+        font-size: 20px;
         height: auto;
-        padding: 0.3em 1em;
+        padding: 0.5em 1em;
+        margin-right: 30px;
     }
 
     .cssbuttons-io-button .icon {
@@ -446,7 +447,7 @@ body {
 
     .cssbuttons-io-button {
         font-size: 14px;
-        padding: 0.25em 0.8em;
+        padding: 0.65em 0.4em;
     }
 
     .cssbuttons-io-button .icon {
